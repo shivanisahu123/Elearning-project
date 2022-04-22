@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="http://www.w3school.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    
+    <style>
+      /* external css: flickity.css */
+
+* { box-sizing: border-box; }
+
+body { font-family: sans-serif; }
+
+.carousel {
+  background: #EEE;
+}
+
+.carousel-cell {
+  width: 28%;
+  height: 200px;
+  margin-right: 10px;
+  background: #8C8;
+  border-radius: 5px;
+  counter-increment: carousel-cell;
+}
+
+.carousel-cell.is-selected {
+  background: #ED2;
+}
+
+/* cell number */
+.carousel-cell:before {
+  display: block;
+  text-align: center;
+  content: counter(carousel-cell);
+  line-height: 200px;
+  font-size: 80px;
+  color: white;
+}
+.carousel-cell-image {
+  display: block;
+  max-height: 100%;
+  margin: 0 auto;
+  max-width: 100%;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s;
+          transition: opacity 0.4s;
+}
+
+        </style>
+        <script>
+           $("#featured-courses").flickity({
+  wrapAround: true,
+  pageDots: false,
+  initialIndex: 1,
+  accessibility: true, //true by default
+  autoPlay: false // advance cells every 3 seconds
+});
+
+function goDoSomething(identifier) {
+  alert("data-id:" + $(identifier).data('paragraph'));
+}
+
+//Tip: it is better not to use margin-right and margin-left to add spaces between each slide as the Flickity slide position could be inperfect, giving an undesirable result. Instead, use padding or add the margin to the child element to make up the space between the slide.
+
+jQuery(document).ready(function($) {
+
+  $('.lightbox_trigger').click(function(e) {
+
+    //prevent default action (hyperlink)
+    e.preventDefault();
+
+    //Get clicked link href
+    var image_href = $(this).attr("href");
+
+    /* 	
+    If the lightbox window HTML already exists in document, 
+    change the img src to to match the href of whatever link was clicked
+		
+    If the lightbox window HTML doesn't exists, create it and insert it.
+    (This will only happen the first time around)
+    */
+
+    if ($('#lightbox').length > 0) { // #lightbox exists
+      var article = document.getElementById('lightbox_trigger');
+      //place href as img src value
+      $('#content').html( '<iframe width="480" height="277" src="' + article.dataset.embed + '" /> ' + '<p> ' + article.dataset.paragraph + '</p>' );
+     
+
+      //show lightbox window - you could use .show('fast') for a transition
+      $('#lightbox').fadeIn();
+    } else { //#lightbox does not exist - create and insert (runs 1st time only)
+      var article = document.getElementById('lightbox_trigger');
+
+      //create HTML markup for lightbox window
+      var lightbox =
+        '<div id="lightbox">' +
+        '<p>Click to close</p>' +
+        '<div id="content">' + //insert clicked link's href into img src
+        '<iframe width="480" height="277" src="' + article.dataset.embed + '" /> ' +
+        '<p> ' + article.dataset.paragraph + '</p>' +
+        '</div>' +
+        '</div>';
+
+      //insert lightbox HTML into page
+      $('body').append(lightbox);
+    }
+
+  });
+
+  //Click anywhere on the page to get rid of lightbox window
+  $(document).on('click', '#lightbox', function() { //must use live, as the lightbox element is inserted into the DOM
+    $('#lightbox').fadeOut();
+  });
+
+});
+requirejs( [
+  'path/to/flickity.pkgd.js',
+], function( Flickity ) {
+  var flkty = new Flickity( '.carousel', {...});
+});
+        </script>
+</head>
+<body>
+    <h1>Flickity - groupCells</h1>
+
+<!-- Flickity HTML init -->
+<div class="carousel" data-flickity='{ "groupCells": true }'>
+  <div class="carousel-cell"  >
+      <img   data-flickity-lazyload=="image/help1.jpg" class="carousel-cell-image" alt="tulip">
+  </div>
+  <div class="carousel-cell"></div>
+  <div class="carousel-cell"></div>
+  <div class="carousel-cell"></div>
+  <div class="carousel-cell"></div>
+  <div class="carousel-cell"></div>
+  <div class="carousel-cell"></div>
+  <div class="carousel-cell"></div>
+  <div class="carousel-cell"></div>
+  <div class="carousel-cell"></div>
+  <div class="carousel-cell"></div>
+</div>
+
+    
+</body>
+</html>

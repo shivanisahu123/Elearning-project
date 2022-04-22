@@ -1,0 +1,120 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+body {
+  margin: 0px;
+  /* background-image: url('image/light.jfif'); */
+  background-size:cover;
+  background-attachment: fixed;
+ 
+
+}
+.img1{ 
+   object-fit: cover;
+}
+nav {
+  /* margin-top: 40px; */
+  padding: 24px;
+  text-align: center;
+  font-family: Raleway;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+#nav-1 {
+  /* background: #3fa46a; */
+  /* background: #9acaca; */
+  /* background: #a4a8a8; */
+  background: rgba(171, 192, 199, 0.849);
+ 
+}
+.link-1 {
+    transition: 0.3s ease;
+    /* background:rgba(171, 192, 199, 0.849); */
+    color: #ffffff;
+    font-size: 20px;
+    text-decoration: none;
+    /* border-top: 4px solid rgba(171, 192, 199, 0.849); */
+    /* border-bottom: 4px solid rgba(171, 192, 199, 0.849); */
+    padding: 20px 0;
+    margin: 0 20px;
+  }
+  .link-1:hover {
+    border-top: 4px solid #ffffff;
+    border-bottom: 4px solid #ffffff;
+    padding: 6px 0; 
+   
+  }
+  .color{
+      color: white;
+  }
+  .slider{
+      height: 550px;
+  }
+  .flex-container{
+    justify-content: center;
+    display: flex;
+  }
+  .footer {
+    /* position: fixed; */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgba(171, 192, 199, 0.849);
+    color: white;
+    text-align: center;
+ }
+ .font-icon{
+   cursor: pointer;
+ }
+ .featured-categories
+ {
+   margin: 20px;
+ }
+.featured-categories img
+{
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  transition: 1s;
+  cursor: pointer;
+
+}
+.featured-categories img:hover
+{
+  transform: scale(1.1);
+}
+.title-box
+{
+  background:rgba(171, 192, 199, 0.849);
+  color: white;
+  width: 300px;
+  padding: 4px 10px;
+  height: 40px;
+  margin-bottom: 30px;
+  display: flex;
+  padding-bottom: 40px;
+}
+.title-box
+{
+  font-size: 24px;
+}
+.title-box::after
+{
+   content: '';
+   border-top: 43px solid rgba(171, 192, 199, 0.849);
+   border-right: 50px solid transparent;
+   position: absolute;
+   display: flex;
+   margin-top: -3.3px;
+   margin-left: 290px;
+}
+.head{
+  /* width: 3%; */
+  /* position: relative; */
+  font-weight: bold;
+  float: right;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 991px) {
+    .slider{
+        height: 250px;
+    }
+  }

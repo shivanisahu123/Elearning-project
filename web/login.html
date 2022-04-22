@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home Page</title>
+        <link rel="shortcut icon" href="image/logo.png" type="image/png">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital@1&display=swap" rel="stylesheet">
+        
+    </head>
+    <body class="bg-light">
+        <header >
+            <div class="container">
+               <nav class="navbar navbar-expand-lg navbar-light " id="nav-1">
+                  <img src="image/logo.png" style="height: 60px; width: 150px;" alt="">
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                     <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                           <a class="nav-link link-1  set-navcustom"   href="index.html">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link link-1 set-navcustom"  href="allbooks.html">All Books <span class="sr-only">(current)</span></a>
+                         </li>
+                        <li class="nav-item active">
+                           <a class="nav-link link-1 set-navcustom"  href="addbook.html">Add Book <span class="sr-only">(current)</span></a>
+                        </li>
+
+                        <li class="nav-item active">
+                           <a class="nav-link link-1 set-navcustom"  href="aboutus.html">About us</a>
+                        </li>
+                        <!-- <li class="nav-item dropdown">
+                           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                             Dropdown
+                           </a>
+                           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                             <a class="dropdown-item" href="#">Action</a>
+                             <a class="dropdown-item" href="#">Another action</a>
+                             <div class="dropdown-divider"></div>
+                             <a class="dropdown-item" href="#">Something else here</a>
+                           </div>
+                           </li> -->
+                        <li class="nav-item active">
+                           <a class="nav-link link-1 set-navcustom" href="help.html"> Contact Us </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle link-1 set-navcustom-set"  href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                               <i class="fa fa-user-circle-o pr-2" style="font-size: 27px;"></i>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <a class="dropdown-item" href="login.html">Login</a>
+                              <a class="dropdown-item" href="create.html">Create Account</a>
+                            </div>
+                            </li> 
+                     </ul>
+                     <button type="button" class="btn btn-outline-secondary msets" data-toggle="modal" data-target="#cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i> (<span class="total-count"></span>)</button><button class="clear-cart btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></button></div>
+                  </div>
+               </nav>
+            </div>
+         </header>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+
+                </div>
+                <div class="col-md-3">
+                    <br>
+                    <br>
+                    <form action="Login" method="Post">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" name="email" class="form-control" required id="exampleInputEmail1" 
+                                   aria-describedby="emailHelp" placeholder="Enter email" autocomplete="off">                   
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" name="pass" class="form-control" required id="exampleInputPassword1" placeholder="Password">
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">remember password</label>
+                        </div>
+                        <br>
+                        <button type="submit"  class="btn btn-secondary ml-2" style="background: rgba(171, 192, 199, 0.849);">Submit</button>
+                    </form> 
+                    <!-- <small>Already have account <a href="login.html">Login</a></small> -->
+                    <br>
+                    <small>dont have account ?<a href="create.html"> create new account</a></small>
+                </div>
+            </div>
+        </div>
+         <!-- Modal -->
+<div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <table class="show-cart table">
+            
+          </table>
+          <div>Total price: ₹<span class="total-cart"></span></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <a type="button" class="btn btn-primary">Order now</a>
+        </div>
+      </div>
+    </div>
+  </div> 
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/card.js"></script>
+    </body>
+</html>

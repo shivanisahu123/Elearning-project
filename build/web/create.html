@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Create New Account</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </head>
+    <body class="bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light " id="nav-1">
+            <a href="homepg.html">  <img src="image/logo.png" style="height: 60px; width: 150px;" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link link-1 " style="color: white; font-weight: bold;"  href="homepg.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link link-1" style="color: white; font-weight: bold;" href="allbooks.html">Categary <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link link-1" style="color: white; font-weight: bold; " href="aboutus.html">About us</a>
+                    </li>                 
+                    <li class="nav-item active">
+                        <a class="nav-link link-1" style="color: white; font-weight: bold;" href="help.html"> Contact Us </a>
+                    </li>
+                </ul>
+                <a href="login.html" style="color: black;"><h6 class="head "><i class="fa fa-user-circle-o pr-2"></i>Login</h6> </a>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                </div>
+                <div class="col-md-6">
+                    <br>
+                    <br>
+                    <form action="Registration" method="post">
+                        <!-- <form> -->
+                        <div class="form-row p-2">
+                            <div class="col">
+                                <label for="inputEmail4">First Name</label>
+                                <input type="text" name="fName" class="form-control" id="fname" required placeholder="First name">
+                            </div>
+                            <div class="col">
+                                <label for="inputEmail4">Last Name</label>
+                                <input type="text" name="lName" required id="lname" class="form-control" placeholder="Last name">
+                            </div>
+                        </div>
+                        <!-- </form> -->
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label for="inputEmail4">Email</label>
+                                <input type="email" name="emailId" required class="form-control" id="email" placeholder="Email" autocomplete="off">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="inputPassword4">Password</label>
+                                <input type="password" name="pass" required class="form-control" id="pwd" placeholder="Password">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="inputPassword4">Confirm Password</label>
+                                <input type="password" required class="form-control" id="cpwd" placeholder="Password">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputAddress">Address line1</label>
+                            <input type="text" name="aLine1" required class="form-control" autocomplete="off" 
+                                   id="add1" placeholder="1234 Main St">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputAddress2">Address line2</label>
+                            <input type="text" name="aLine2" required class="form-control" autocomplete="off"
+                                   id="add2" placeholder="Apartment, studio, or floor">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="inputCity">City</label>
+                                <input type="text" name="city" required class="form-control" autocomplete="off"
+                                       id="city">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="inputState">State</label>
+                                <select id="state" name="state" required class="form-control">
+                                    <option selected>Select State</option>
+                                    <option>Andhra Pradesh</option>
+                                    <option>Arunachal Pradesh</option>
+                                    <option>Assam</option>
+                                    <option>Bihar</option>
+                                    <option>Chhattisgarh</option>
+                                    <option>Goa</option>
+                                    <option>Gujarat</option>
+                                    <option>Haryana</option>
+                                    <option>Himachal Pradesh</option>
+                                    <option>Jharkhand</option>
+                                    <option>Karnataka</option>
+                                    <option>Kerala</option>
+                                    <option>Madhya Pradesh</option>
+                                    <option>Maharashtra</option>
+                                    <option>Manipur</option>
+                                    <option>Meghalaya</option>
+                                    <option>Mizoram</option>
+                                    <option>Nagaland</option>
+                                    <option>Odisha</option>
+                                    <option>Punjab</option>
+                                    <option>Rajasthan</option>
+                                    <option>Sikkim</option>
+                                    <option>Tamil Nadu</option>
+                                    <option>Telangana</option>
+                                    <option>Tripura</option>
+                                    <option>Uttar Pradesh</option>
+                                    <option>Uttarakhand</option>
+                                    <option>West Bengal</option>
+                                </select>
+
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label for="inputZip">Pincode</label>
+                                <input type="text" name="pinCode" required class="form-control" autocomplete="off" 
+                                       id="pcode">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                        </div>
+                        <button type="submit" id="submit"  class="btn btn-secondary ml-2" style="background: rgba(171, 192, 199, 0.849);">Sign in</button>
+                    </form>
+                    <br>
+                    <br>
+                </div>
+
+            </div>
+            <div class="row">
+                <h6 style="display: none;">Account has been Created</h6>
+            </div>
+<!--            <script>
+                $("#submit").click(function ()
+                {
+                    var fname = $("#fname").val();
+                    var lname = $("#lname").val();
+                    var email = $("#email").val();
+                    var pwd = $("#pwd").val();
+                    var cpwd = $("#cpwd").val();
+                    var add1 = $("#add1").val();
+                    var add2 = $("#add2").val();
+                    var city = $("#city").val();
+                    var state = $("#state").val();
+                    var pcode = $("#pcode").val();
+                    if (fname == '' || lname == '' || email == '' || pwd == '' || cpwd == '' || add1 == '' || add2 == '' || city == '' || state == '' || pcode == '')
+                    {
+                        alert("please fill all fields");
+
+                    } else {
+                        alert("Sign-Up Succesfully  Go to Login");
+                    }
+                });
+            </script>-->
+        </div>
+    </body>
+</html>
